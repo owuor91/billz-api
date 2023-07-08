@@ -7,8 +7,6 @@ import uuid
 from app.base.models import BaseModel
 
 
-
-
 class User(BaseModel):
     __tablename__ = "user"
     user_id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)

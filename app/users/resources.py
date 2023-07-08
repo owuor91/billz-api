@@ -33,7 +33,7 @@ class UserRegistration(Resource):
             user.password
         ).decode("utf-8")
         user.created_by = "self"
-        user.updated_by="self"
+        user.updated_by = "self"
         try:
             save(user)
             schema = UserSchema(exclude=["password"])

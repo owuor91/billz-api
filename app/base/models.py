@@ -1,14 +1,12 @@
 import datetime
 import logging
-
 from sqlalchemy import Column, DateTime, String, Boolean
 from sqlalchemy.dialects.postgresql import JSON
 from sqlalchemy.ext.declarative import declarative_base
-
 from db import db
-
 from app.base.exceptions import DatabaseError
 Base = declarative_base()
+
 
 class BaseModel(Base):
 
