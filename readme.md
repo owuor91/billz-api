@@ -13,7 +13,7 @@ Supported functionality:
 
 EXAMPLE:
 ```
-http://192.81.215.35/register
+http://13.37.106.218/users/register
 
 {
     "first_name":"Abadan",
@@ -43,7 +43,7 @@ Response:
 
 EXAMPLE:
 ```
-http://192.81.215.35/login
+http://13.37.106.218/users/login
 
 {
     "email": "kano87@gmail.com",
