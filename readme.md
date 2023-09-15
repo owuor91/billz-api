@@ -9,7 +9,7 @@ Supported functionality:
 
 ## Usage
 ### Register a user
-`POST /register`
+`POST /users/register`
 
 EXAMPLE:
 ```
@@ -39,7 +39,7 @@ Response:
 ```
 
 ### Login a User
-`POST /login`
+`POST /users/login`
 
 EXAMPLE:
 ```
