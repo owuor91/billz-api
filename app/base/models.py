@@ -36,8 +36,9 @@ def save(obj):
     except Exception as exc:
         session.rollback()
         logging.exception(exc)
+        err = exc.__cause__
         raise DatabaseError(
-            f"Problem saving {obj.__class__.__name__} record in database"
+            f"Problem saving {obj.__class__.__name__} record in database {err}"
         )
 
     return obj
@@ -52,6 +53,16 @@ def get(model, pk=None):
         return session.query(model).get(pk)
     return session.query(model).all()
 
+
+def get_user_items(model, user_id):
+    """
+    Get user's records by their user_id
+    """
+    session = db.session
+    result = []
+    if user_id is not None:
+        result = session.query(model).filter(model.user_id==user_id).all()
+    return result
 
 def set_model_dict(obj, model_dict):
     """Set Model Attributes from dict."""

@@ -66,7 +66,7 @@ class UserLogin(Resource):
         ):
             access_token = create_access_token(
                 user.user_id,
-                expires_delta=datetime.timedelta(seconds=86400),
+                expires_delta=datetime.timedelta(days=30),
             )
 
             response = {

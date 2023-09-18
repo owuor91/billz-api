@@ -9,6 +9,7 @@ from alembic import context
 # access to the values within the .ini file in use.
 from app.base.models import Base
 from app.users.model import User
+from app.bills.model import Bill, UpcomingBill
 config = context.config
 
 # Interpret the config file for Python logging.
